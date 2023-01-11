@@ -1,0 +1,20 @@
+{
+  "_cts": {
+    "home": {},
+    "menu": {}
+  },
+  "slices": {
+    "Welcome": {
+      "default": {
+        "primary": {
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

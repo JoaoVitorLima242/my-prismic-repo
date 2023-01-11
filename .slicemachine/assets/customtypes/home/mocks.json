@@ -1,0 +1,16 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "regular"
+  },
+  "seo_title": {
+    "__TYPE__": "FieldContent",
+    "value": "solar",
+    "type": "Text"
+  },
+  "seo_description": {
+    "__TYPE__": "FieldContent",
+    "value": "experience",
+    "type": "Text"
+  }
+}
