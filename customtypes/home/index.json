@@ -25,6 +25,20 @@
           "label": "SEO Description",
           "placeholder": ""
         }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "about": {
+              "type": "SharedSlice"
+            },
+            "welcome": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     }
   }

@@ -30,7 +30,23 @@ interface HomeDocumentData {
      *
      */
     seo_description: prismicT.KeyTextField;
+    /**
+     * Slice Zone field in *Home*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<HomeDocumentDataSlicesSlice>;
 }
+/**
+ * Slice for *Home → Slice Zone*
+ *
+ */
+type HomeDocumentDataSlicesSlice = AboutSlice | WelcomeSlice;
 /**
  * Home document from Prismic
  *
@@ -93,6 +109,95 @@ export interface MenuDocumentDataLinkItem {
 export type MenuDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<MenuDocumentData>, "menu", Lang>;
 export type AllDocumentTypes = HomeDocument | MenuDocument;
 /**
+ * Primary content in About → Primary
+ *
+ */
+interface AboutSliceDefaultPrimary {
+    /**
+     * Title field in *About → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *About → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * My Name field in *About → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about.primary.my_name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    my_name: prismicT.TitleField;
+    /**
+     * My Location field in *About → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about.primary.my_location
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    my_location: prismicT.RichTextField;
+    /**
+     * My Photo field in *About → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about.primary.my_photo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    my_photo: prismicT.ImageField<never>;
+    /**
+     * my About Text field in *About → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about.primary.my_about_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    my_about_text: prismicT.RichTextField;
+}
+/**
+ * Default variation for About Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `About`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AboutSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<AboutSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *About*
+ *
+ */
+type AboutSliceVariation = AboutSliceDefault;
+/**
+ * About Shared Slice
+ *
+ * - **API ID**: `about`
+ * - **Description**: `About`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AboutSlice = prismicT.SharedSlice<"about", AboutSliceVariation>;
+/**
  * Primary content in Welcome → Primary
  *
  */
@@ -146,6 +251,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomeDocumentData, HomeDocument, MenuDocumentData, MenuDocumentDataLinkItem, MenuDocument, AllDocumentTypes, WelcomeSliceDefaultPrimary, WelcomeSliceDefault, WelcomeSliceVariation, WelcomeSlice };
+        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, MenuDocumentData, MenuDocumentDataLinkItem, MenuDocument, AllDocumentTypes, AboutSliceDefaultPrimary, AboutSliceDefault, AboutSliceVariation, AboutSlice, WelcomeSliceDefaultPrimary, WelcomeSliceDefault, WelcomeSliceVariation, WelcomeSlice };
     }
 }

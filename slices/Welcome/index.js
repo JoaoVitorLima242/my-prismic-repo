@@ -8,8 +8,8 @@ import styles from './welcome.module.css'
  * @param { WelcomeProps }
  */
 const Welcome = ({ slice }) => (
-  <section className={styles.welcomeWrapper}>
-    <div className={styles.welcomeContent}>
+  <section className={styles.wrapper}>
+    <div className={styles.content}>
       <PrismicRichText field={slice.primary.title} />
       <div className={styles.tech}>
         <PrismicRichText field={slice.primary.description} />
