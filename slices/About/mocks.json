@@ -35,8 +35,10 @@
           {
             "type": "heading5",
             "content": {
-              "text": "Heading"
-            }
+              "text": "João Vitor Brietzke de Lima",
+              "spans": []
+            },
+            "direction": "ltr"
           }
         ]
       },
@@ -46,8 +48,10 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Excepteur cupidatat excepteur quis adipisicing anim Lorem exercitation cillum sint nulla exercitation magna sunt elit."
-            }
+              "text": "Porto Alegre - Brazil",
+              "spans": []
+            },
+            "direction": "ltr"
           }
         ]
       },
@@ -80,8 +84,26 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Cupidatat tempor irure non pariatur quis aute ex incididunt veniam."
-            }
+              "text": "Hello, I’m João Vitor and I’m a software engineer. I chose this profession because is a really great way to develop virtual ideas and bring them to reality.",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "I have been surfing in this ocean of knowledge and I‘m growing increasingly passionate about facing the new challenges found in this field.",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "I consider myself a hardworking and creative person. I have been careful to stay in touch with the latest technologies, using only the latest cutting-edge material, within my work.",
+              "spans": []
+            },
+            "direction": "ltr"
           }
         ]
       }
