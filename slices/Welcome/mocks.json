@@ -9,8 +9,10 @@
           {
             "type": "heading1",
             "content": {
-              "text": "Plant"
-            }
+              "text": "Full-Stack Web and Mobile Developer",
+              "spans": []
+            },
+            "direction": "ltr"
           }
         ]
       },
@@ -20,8 +22,10 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Enim velit proident do deserunt proident officia magna anim nulla ut ad reprehenderit magna eiusmod veniam."
-            }
+              "text": "ReactJS, React Native, NextJS, Redux, NodeJS,\nMongoDB, Typescript & GraphQL",
+              "spans": []
+            },
+            "direction": "ltr"
           }
         ]
       }

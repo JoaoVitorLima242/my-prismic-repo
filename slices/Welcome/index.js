@@ -1,5 +1,6 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
+import styles from './welcome.module.css'
 
 /**
  * @typedef {import("@prismicio/client").Content.WelcomeSlice} WelcomeSlice
@@ -7,10 +8,12 @@ import { PrismicRichText } from '@prismicio/react'
  * @param { WelcomeProps }
  */
 const Welcome = ({ slice }) => (
-  <section className='welcome wrapper'>
-    <div className='content'>
+  <section className={styles.welcomeWrapper}>
+    <div className={styles.welcomeContent}>
       <PrismicRichText field={slice.primary.title} />
-      <PrismicRichText field={slice.primary.description} />
+      <div className={styles.tech}>
+        <PrismicRichText field={slice.primary.description} />
+      </div>
     </div>
   </section>
 )
